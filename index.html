@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wallet manager</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nerko+One&family=Source+Sans+Pro:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="project.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <header>
+        <h1><i class="fas fa-wallet"></i>Wallet</h1>
+        <p>Your personal finance manager</p>
+      </header>
+      <div class="details">
+        <aside class="balance">
+          <h3>Current balance</h3>
+          <p id="owning-budget">0.00</p>
+          <div class="controls">
+            <button><i class="fas fa-plus"></i> Add transaction</button
+            ><button><i class="fas fa-trash-alt"></i> Delete all</button>
+          </div>
+          <h4>Choose theme</h4>
+          <div class="theme-color">
+            <div id="color-white"><i class="fas fa-circle"></i>white</div>
+            <div id="color-black"><i class="fas fa-circle"></i>black</div>
+          </div>
+        </aside>
+        <main class="transactions">
+          <h2>Transactions List</h2>
+          <div id="categories">
+            <div class="outcome">
+              <p>Income:</p>
+              <ul id="income-list"></ul>
+            </div>
+            <div class="income">
+              <p>Expenses:</p>
+              <ul id="outcome-list"></ul>
+            </div>
+          </div>
+        </main>
+      </div>
+    </div>
+    <div id="modal">
+      <div class="inside">
+        <i class="fas fa-times"></i>
+        <div class="opt-inside">
+          <label for="flow-title"
+            >Short description of the transaction:
+            <span id="additional-text">(min. 6 chars)</span>
+          </label>
+          <input id="flow-title" type="text" maxlength="40" />
+        </div>
+        <div class="opt-inside">
+          <label for="flow-amount"
+            >Enter the amount of income / expense:
+          </label>
+          <input id="flow-amount" type="number" />
+        </div>
+        <div class="opt-inside">
+          <label for="expense">Choose the category (expense or income):</label>
+          <select name="expenses" id="expense">
+            <option value="default" disabled selected>Categories</option>
+            <option value="outgoings">Shopping</option>
+            <option value="income">work income</option>
+            <option value="outgoings">unplanned expenses</option>
+            <option value="income">income from other sources</option>
+          </select>
+        </div>
+        <button id="submit-data">Submit data</button>
+      </div>
+    </div>
+  </body>
+</html>
