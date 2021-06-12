@@ -2,7 +2,7 @@
 
 ## Demo
 
-[**click live demo of the project**](https://dominiksiejka.github.io/BillSplitterApp)
+[**click live demo of the project**](https://dominiksiejka.github.io/FinanceManagerApp/)
 
 ![FinanceManagerApp preview](./assets/wallet.jpg)
 
@@ -35,7 +35,7 @@ First of all you neeed to add your first transaction. Press 'add transaction' th
 with BASH
 
 # clone the remote repo to your local one
-$ git clone https://github.com/dominiksiejka/BillSplitterApp.git
+$ git clone https://github.com/dominiksiejka/FinanceManagerApp.git
 
 # open the index.html file or use your code editor to open it with live server
 
@@ -48,4 +48,4 @@ $ git clone https://github.com/dominiksiejka/BillSplitterApp.git
 
 ## License
 
-- MIT © [Dominik Siejka ](https://github.com/dominiksiejka/BillSplitterApp)
+- MIT © [Dominik Siejka ](https://github.com/dominiksiejka/FinanceManagerApp)
