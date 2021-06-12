@@ -4,7 +4,7 @@
 
 [**click live demo of the project**](https://dominiksiejka.github.io/BillSplitterApp)
 
-![FinanceManagerApp preview](./assets/billsplitter.jpg)
+![FinanceManagerApp preview](./assets/wallet.jpg)
 
 ## Table of Contents
 
