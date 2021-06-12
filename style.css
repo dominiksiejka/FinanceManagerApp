@@ -1,0 +1,341 @@
+* {
+  font-family: var(--fontFamily2);
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --fontFamily1: "Nerko One", cursive;
+  --fontFamily2: "Source Sans Pro", sans-serif;
+  --colorMode: rgba(255, 255, 255, 0.9);
+  --bgcMode1: rgba(249, 86, 255, 0.9);
+  --transcationsH2color: #000;
+}
+body {
+  background: radial-gradient(
+    circle,
+    rgba(198, 186, 191, 1) 0%,
+    rgba(245, 245, 245, 1) 100%
+  );
+}
+
+div.container {
+  background-color: var(--bgcMode1);
+  width: 98%;
+  margin: 0 auto 20px auto;
+  padding: 10px 5px;
+  display: flex;
+  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+}
+@media only screen and (min-width: 700px) {
+  div.container {
+    width: 90%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  div.container {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  div.container {
+    width: 60%;
+  }
+}
+.container header {
+  text-align: center;
+}
+
+.container header h1 {
+  font-weight: 300;
+  font-size: 40px;
+  letter-spacing: 1.2px;
+  color: var(--colorMode);
+  text-shadow: 0 0 2px black;
+}
+.container .balance p#owning-budget {
+  font-weight: 400;
+  color: var(--colorMode);
+  text-shadow: 0 0 2px black;
+  font-size: 20px;
+  letter-spacing: 1.2px;
+}
+.container header p {
+  color: var(--colorMode);
+  text-shadow: 0 0 1px black;
+}
+
+.container header h1 i {
+  font-size: 33px;
+  margin-right: 10px;
+}
+
+div.details {
+  margin-top: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+
+  flex-basis: 60%;
+}
+@media screen and (min-width: 700px) {
+  div.details {
+    flex-direction: row;
+    padding: 10px;
+  }
+}
+
+.details main.transactions {
+  background-color: var(--colorMode);
+  flex-grow: 3;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  min-height: 300px;
+}
+.details aside.balance {
+  flex-grow: 1;
+  text-align: center;
+  margin-bottom: 20px;
+  height: 300px;
+  border: 1px solid var(--colorMode);
+}
+aside.balance h3 {
+  color: var(--colorMode);
+  text-shadow: 0 0 2px black;
+}
+main.transactions div#categories {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-around;
+  flex-basis: 20%;
+  align-items: center;
+  font-size: 24px;
+}
+@media only screen and (min-width: 700px) {
+  .details aside.balance {
+    order: 1;
+    margin-left: 10px;
+    margin-bottom: 0;
+    min-height: 400px;
+  }
+}
+#categories p {
+  font-family: var(--fontFamily1);
+}
+#categories div.outcome p {
+  color: green;
+}
+#categories div.income p,
+div.outcome p {
+  padding: 10px;
+}
+#categories div.income p {
+  color: orangered;
+}
+
+#categories .outcome,
+.income {
+  border: 1px solid white;
+  min-width: 150px;
+  min-height: 70px;
+}
+
+.transactions h2 {
+  margin: 10px 0;
+  font-size: 22px;
+  color: var(--transcationsH2color);
+}
+
+aside.balance {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.balance .controls button {
+  padding: 5px 10px;
+  margin-left: 10px;
+  outline: none;
+  border: none;
+  box-shadow: 0 0 4px 2px white;
+  cursor: pointer;
+}
+.controls button:hover {
+  color: white;
+  background-color: black;
+  box-shadow: 0 0 4px 2px black;
+}
+
+aside.balance p {
+  font-size: 22px;
+}
+div.container {
+  margin-top: 20px;
+  border-radius: 15px;
+}
+
+div#modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#modal .inside {
+  position: fixed;
+  background-color: var(--bgcMode1);
+  display: flex;
+  height: 350px;
+  flex-direction: column;
+  width: 95%;
+  flex-basis: 50vh;
+  padding: 15px;
+  border-radius: 10px;
+  justify-content: space-around;
+}
+@media only screen and (min-width: 700px) {
+  #modal .inside {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  #modal .inside {
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  #modal .inside {
+    width: 50%;
+  }
+}
+.inside .opt-inside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inside .opt-inside input,
+select#expense {
+  text-align-last: center;
+  text-align: center;
+  letter-spacing: 1.2px;
+  width: 60%;
+  padding: 3px 0;
+  margin-top: 8px;
+  outline: none;
+}
+
+.inside button {
+  align-self: center;
+  padding: 6px 20px;
+  outline: none;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 3px 2px white;
+  transition: 0.1s ease-out;
+}
+
+.inside button:hover {
+  background-color: black;
+  color: white;
+  letter-spacing: 1.2px;
+  border-radius: 5px;
+}
+
+#modal .inside i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 32px;
+  transform: translate(calc(50% - 2px), calc(-50% + 2px));
+  color: white;
+  transition: 0.3s linear;
+  cursor: pointer;
+}
+
+#modal .inside i:hover {
+  transform: translate(calc(50% - 2px), calc(-50% + 2px)) rotate(360deg);
+  color: red;
+}
+#income-list,
+#outcome-list {
+  list-style-type: none;
+  font-size: 16px;
+}
+
+#income-list li,
+#outcome-list li {
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: black;
+  width: 80%;
+  margin: 0 auto 5px auto;
+  border-radius: 5px;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+}
+#outcome-list li {
+  background-color: orangered;
+}
+
+#outcome-list li i,
+#income-list li i {
+  display: block;
+  color: yellow;
+  cursor: pointer;
+}
+#categories i:hover {
+  text-shadow: 0 0 3px yellow;
+}
+#categories span {
+  padding-left: 10px;
+  flex-grow: 1;
+  text-align: left;
+}
+
+#income-list li {
+  background-color: green;
+}
+span#additional-text {
+  font-size: 12px;
+}
+#color-white {
+  margin-bottom: 10px;
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
+div#color-white i {
+  text-shadow: 0 0 5px white;
+  color: white;
+  margin-right: 10px;
+}
+div#color-white:hover i {
+  text-shadow: 0 0 10px white;
+}
+div.theme-color {
+  font-size: 16px;
+}
+div#color-black {
+  cursor: pointer;
+  letter-spacing: 1.2px;
+}
+div#color-black i {
+  text-shadow: 0 0 5px black;
+  color: black;
+  margin-right: 10px;
+}
+div#color-black:hover i {
+  text-shadow: 0 0 10px black;
+}
